@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_event"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.smartpay.smartpay.EventActivity">
+
+    <ImageView
+        android:id="@+id/event_banner"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:src="@drawable/event_banner_default"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:id="@+id/transaction_history_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_banner"
+        android:text="@string/your_transaction_history"
+        android:layout_marginTop="@dimen/activity_default_margin"
+        android:layout_marginLeft="@dimen/activity_default_margin"
+        style="@style/TitleText"/>
+
+    <View
+        android:id="@+id/transaction_history_label_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/transaction_history_label"
+        android:layout_marginLeft="@dimen/activity_default_margin"
+        android:layout_marginRight="@dimen/activity_default_margin"
+        android:background="@color/cardview_dark_background" />
+
+    <ListView
+        android:id="@+id/event_transactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transaction_history_label_bar"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_default_margin"
+            android:layout_marginLeft="@dimen/activity_default_margin"
+            android:layout_marginRight="@dimen/activity_default_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TitleText"
+                android:text="TOTAL"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                style="@style/TitleText"
+                android:textStyle="bold"
+                android:text="R$ 54,80"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_default_margin"
+            android:layout_marginRight="@dimen/activity_default_margin"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <!--<Button-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Buy new items"/>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_buy_with_masterpass"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"/>-->
+
+            <!--<Button-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Pay Account"/>-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

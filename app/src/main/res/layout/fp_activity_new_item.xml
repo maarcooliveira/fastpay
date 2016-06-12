@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mastercard.mymerchant.activity.fastpay.NewItemActivity"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Purchase"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        style="@style/TitleText"/>
+
+    <TextView
+        android:id="@+id/event_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mastercard SHIFT"
+        android:gravity="center"
+        android:textStyle="bold"
+        style="@style/TitleText"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/qrcode_default_new"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Present this code to \nmake a purchase"
+        android:gravity="center"
+        android:textAlignment="center"
+        style="@style/TitleText"/>
+
+
+</LinearLayout>

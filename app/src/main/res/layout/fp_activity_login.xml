@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mastercard.mymerchant.activity.fastpay.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/fastpay_logo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sign_up_log_in"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/facebook_login_button2"
+            android:textColor="@color/com_facebook_button_text_color"
+            android:background="@drawable/button_bg_rounded_corners"
+            android:paddingLeft="15dp"
+            android:paddingRight="25dp"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Facebook"
+            android:onClick="onLoginPhone"
+            android:radius="3dip"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/phone_login_button1"
+            android:textColor="@color/com_facebook_button_text_color"
+            android:background="@drawable/button_rounded_2"
+            android:layout_width="340dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/phone_login"
+            android:onClick="onLoginPhone"/>
+
+        <!--<Button-->
+        <!--android:id="@+id/phone_login_button"-->
+        <!--android:textColor="@color/com_facebook_button_text_color"-->
+        <!--android:drawableLeft="@drawable/ic_action_phone"-->
+        <!--android:layout_width="360dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="@string/phone_login"-->
+        <!--android:onClick="onLoginPhone"-->
+        <!--android:background="#808080"/>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_login_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FlatButton"
+                android:text="@string/email_login"
+                android:onClick="onLoginEmail"/>
+
+        </LinearLayout>
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/facebook_login_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

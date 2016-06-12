@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/event_banner"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:src="@drawable/event_banner_default"/>
+
+            <TextView
+                android:id="@+id/event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MasterCard Shift"
+                android:layout_marginLeft="@dimen/activity_default_margin"
+                android:layout_marginTop="@dimen/activity_default_margin"
+                android:layout_marginRight="@dimen/activity_default_margin"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginBottom="0dp"
+                style="@style/SubtitleText"/>
+
+            <TextView
+                android:id="@+id/event_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12/06/2016"
+                android:layout_marginLeft="@dimen/activity_default_margin"
+                android:layout_marginBottom="@dimen/activity_default_margin"
+                style="@style/DefaultText"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

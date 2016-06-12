@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.smartpay.smartpay.NewCardActivity"
+    android:layout_margin="@dimen/activity_default_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TitleText"
+        android:text="@string/hello_user"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SubtitleText"
+        android:text="@string/new_card_advantages"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--<com.rengwuxian.materialedittext.MaterialEditText-->
+            <!--android:id="@+id/card_numer"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:hint="@string/card_number"-->
+            <!--app:met_iconLeft="@drawable/ic_action_card"-->
+            <!--/>-->
+
+        <!--<com.rengwuxian.materialedittext.MaterialEditText-->
+            <!--android:id="@+id/card_holder"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:hint="@string/card_holder"-->
+            <!--app:met_iconLeft="@drawable/ic_action_user"-->
+            <!--/>-->
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/card_expiration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/card_expiration_placeholder"
+            app:met_helperText="@string/card_expiration"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/card_security_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/card_security_code"
+            />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continue_label"
+        android:layout_gravity="center_horizontal"
+        android:onClick="saveCardInfo"/>
+
+
+
+</LinearLayout>
