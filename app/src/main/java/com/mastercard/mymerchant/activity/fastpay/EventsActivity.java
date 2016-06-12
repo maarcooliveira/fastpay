@@ -89,4 +89,10 @@ public class EventsActivity extends BaseActivity {
         r.setParameters(b);
         r.executeAsync();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

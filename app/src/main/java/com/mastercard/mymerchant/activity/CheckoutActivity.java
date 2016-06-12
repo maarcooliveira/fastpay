@@ -23,7 +23,6 @@
 package com.mastercard.mymerchant.activity;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,8 +31,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.mastercard.masterpass.core.MasterPassException;
@@ -126,6 +127,7 @@ public class CheckoutActivity extends Activity
 
     TransactionAdapter transactionAdapter;
     private RelativeLayout mLayoutBuyWithMasterPass;
+    private ImageView photoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,6 +156,13 @@ public class CheckoutActivity extends Activity
         });
 
         mLayoutBuyWithMasterPass = (RelativeLayout) findViewById(R.id.layout_buy_with_masterpass);
+        photoButton = (ImageView) findViewById(R.id.photo_button);
+        photoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Transaction accepted", Toast.LENGTH_SHORT).show();
+            }
+        });
 //        mLayoutOr = (RelativeLayout) findViewById(R.id.layout_or);
 
         // Get the currency being used
@@ -639,15 +648,15 @@ public class CheckoutActivity extends Activity
         updateBasketTotals();
 
         // If there are no items left in the basket, then go back to the products activity
-        if (numItemsLeft <= 0) {
-            Log.w(TAG, "No items left in basket");
-            DialogHelper.emptyBasket(this, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    backToProducts();
-                }
-            });
-        }
+//        if (numItemsLeft <= 0) {
+//            Log.w(TAG, "No items left in basket");
+//            DialogHelper.emptyBasket(this, new DialogInterface.OnClickListener() {
+//                @Override
+//                public void onClick(DialogInterface dialog, int which) {
+//                    backToProducts();
+//                }
+//            });
+//        }
 
         // Because the Basket is shared by the adapter, it will have automatically updated
         mBasketAdapter.notifyDataSetChanged();
@@ -656,10 +665,10 @@ public class CheckoutActivity extends Activity
     /**
      * Override the onBackPressed behaviour to force navigation to the products page.
      */
-    @Override
-    public void onBackPressed() {
-        backToProducts();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        backToProducts();
+//    }
 
     /**
      * Navigate to the products page whilst clearing the backstack.
